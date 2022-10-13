@@ -5,7 +5,7 @@ import os
 from time import sleep
 from bs4 import BeautifulSoup as bs
 from dataclasses import dataclass
-
+ 
 
 '''dataclass - это декоратор класса, который позволяет в упрощенном виде создавать класс для хранения данных. Будем хранить в нем свои тексты'''
 
@@ -50,7 +50,7 @@ class Scraper:
         '''В этом месте происходит очистка консоли, как только вывод достигает 10 строчек (можно это поменять)'''
         self.counter += 1 # нужно закомментировать, если не хотим логировать все страницы подряд
         if self.counter > 10:
-            os.system('cls')  # команда для linux & macos может отличаться. Для linux - clear
+            os.system('clear')  # команда для linux & macos может отличаться. Для linux - clear
             self.counter = 0
 
         # если количество скрауленных текстов больше ndump, делаем дамп, чтобы не хранить их в оперативе
